@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkDown = require('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -17,14 +18,14 @@ const questions = [
         type: 'list',
         message: 'Please Enter the Type of License used, if not applicable, choose "skip"',
         name: 'license',
-        choices: ['']
+        choices: ['MIT', 'GNU', 'No License']
     },
 
 
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+const write = function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => {
         if (err){
             console.log(err);
@@ -33,7 +34,14 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+// Prompt the user with questions and save to constant
+    const data = inquirer.prompt(questions);
+
+    const MD = generateMarkDown(data);
+
+    write('READMEnew.md', MD);
+}
 
 // Function call to initialize app
 init();
