@@ -1,6 +1,6 @@
-# Hello
+# Tyler
   ## Description: 
-  HEloo
+  Tyler
 
   ## Table of Contents:
   * [Installation](#installation)
