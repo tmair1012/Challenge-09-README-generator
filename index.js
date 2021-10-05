@@ -6,7 +6,7 @@ const generateMarkDown = require('./utils/generateMarkdown')
 const questions = [
     {
         type: 'input',
-        name: 'name',
+        name: 'title',
         message: 'What is the name of your project?'
     },
     {
@@ -19,9 +19,7 @@ const questions = [
         message: 'Please Enter the Type of License used, if not applicable, choose "skip"',
         name: 'license',
         choices: ['MIT', 'GNU', 'No License']
-    },
-
-
+    }
 ];
 
 // TODO: Create a function to write README file
@@ -36,11 +34,14 @@ const write = function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
 // Prompt the user with questions and save to constant
-    const data = inquirer.prompt(questions);
-
-    const MD = generateMarkDown(data);
-
-    write('READMEnew.md', MD);
+    inquirer.prompt(questions)
+    .then(function(data){
+//call the generateMarkdown file implementing the data gotten from prompts
+   const MD = generateMarkDown(data);
+//write to a new README using write function.
+   write('READMEnew.md', MD);
+})
+   
 }
 
 // Function call to initialize app
