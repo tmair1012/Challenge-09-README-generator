@@ -25,20 +25,13 @@ function generateMarkdown(data) {
 ### Usage:
 ${data.usage}
 
-### Contributors:
-${data.contributors}
+###Contributions:
+${data.contributions} + ${data.github}
 
 ### License:
 ${data.license}
 
-### Badges:
-${data.badges}
 
-### Features:
-${data.features}
-
-### How to Contribute:
-${data.contribute}
 `;
 }
 
