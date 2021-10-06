@@ -1,6 +1,7 @@
-# README Generator
+# a
+  undefined
   ## Description: 
-  Provides a node terminal input in which the user can enter information about their project which creates a standard and professional README using the information inputted
+  a
 
   ## Table of Contents:
   * [Installation](#installation)
@@ -11,15 +12,13 @@
   * [Questions](#questions)
 
 ### Installation:
-Download your npm files
+a
 
 ### Usage:
-run node index in terminal, enter information about product, wahlah
+a
 
 ### Contributions:
-undefined + @tmair1012
+undefined + a
 
 ### License:
 MIT
-
-

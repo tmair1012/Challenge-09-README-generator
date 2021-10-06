@@ -2,6 +2,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkDown = require('./utils/generateMarkdown')
+const renderLicenseBadge = require('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -60,8 +61,10 @@ function init() {
     inquirer.prompt(questions)
     .then(function(data){
     console.log(data);
-//call the generateMarkdown file implementing the data gotten from prompts
+// call the generateMarkdown file implementing the data gotten from prompts
    const MD = generateMarkDown(data);
+// Implement correct License Badge
+renderLicenseBadge(data.license);
 //write to a new README using write function.
    write('READMEnew.md', MD);
 })
