@@ -1,6 +1,6 @@
-# Tyler
+# README Generator
   ## Description: 
-  Tyler
+  Provides a node terminal input in which the user can enter information about their project which creates a standard and professional README using the information inputted
 
   ## Table of Contents:
   * [Installation](#installation)
@@ -11,13 +11,13 @@
   * [Questions](#questions)
 
 ### Installation:
-undefined
+Download your npm files
 
 ### Usage:
-undefined
+run node index in terminal, enter information about product, wahlah
 
 ### Contributions:
-undefined + undefined
+undefined + @tmair1012
 
 ### License:
 MIT

@@ -18,7 +18,30 @@ const questions = [
         type: 'list',
         message: 'Please Enter the Type of License used, if not applicable, choose "skip"',
         name: 'license',
-        choices: ['MIT', 'GNU', 'No License']
+        choices: ['MIT', 'GNU', 'No License'],
+    },
+    {    type: 'input',
+        name: 'installation',
+        message: 'Please provide steps to installation'
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Provide a tutorial on how a person will use this program'
+    },
+    {type: 'input',
+        name: 'contribution',
+        message: 'Provide shoutouts to contributors, enter Github in next question'
+    },
+    {
+        type:'input',
+        name: 'github',
+        message: 'provide Github(s) of contributors'
+    },
+    {
+        type: 'input',
+        name: 'questions',
+        message: 'Let people know how to ask questions! Enter email'
     }
 ];
 
@@ -36,6 +59,7 @@ function init() {
 // Prompt the user with questions and save to constant
     inquirer.prompt(questions)
     .then(function(data){
+    console.log(data);
 //call the generateMarkdown file implementing the data gotten from prompts
    const MD = generateMarkDown(data);
 //write to a new README using write function.
