@@ -2,7 +2,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkDown = require('./utils/generateMarkdown')
-const renderLicenseBadge = require('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -21,7 +20,7 @@ const questions = [
         name: 'license',
         choices: ['MIT', 'GNU', 'No License'],
     },
-    {    type: 'input',
+    {   type: 'input',
         name: 'installation',
         message: 'Please provide steps to installation'
     },
@@ -56,17 +55,16 @@ const write = function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {
+async function init() {
 // Prompt the user with questions and save to constant
     inquirer.prompt(questions)
     .then(function(data){
+    //let render = renderLicenseBadge();
+    let MD = generateMarkDown(data);
     console.log(data);
-// call the generateMarkdown file implementing the data gotten from prompts
-   const MD = generateMarkDown(data);
-// Implement correct License Badge
-renderLicenseBadge(data.license);
-//write to a new README using write function.
-   write('READMEnew.md', MD);
+    write('READMEnew.md', MD);
+
+   
 })
    
 }
