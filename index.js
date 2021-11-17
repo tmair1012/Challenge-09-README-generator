@@ -40,7 +40,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'questions',
+        name: 'email',
         message: 'Let people know how to ask questions! Enter email'
     }
 ];

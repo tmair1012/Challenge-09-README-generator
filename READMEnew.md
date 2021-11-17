@@ -1,7 +1,7 @@
-# ReadME Generator
-  undefined
+# jk;asdlf
+  ![License](https://img.shields.io/static/v1?label=liscense&message=MIT&color=green)
   ## Description: 
-  Use Node.js to easily write a professional README by entering the data into the questions provided and the readme generator will markdown all the data into a useable README
+  ;adfs
 
   ## Table of Contents:
   * [Installation](#installation)
@@ -12,13 +12,19 @@
   * [Questions](#questions)
 
 ### Installation:
-Installing node packages, installing inquirer node package
+j;ladsf
 
 ### Usage:
-run node index.js, simply enter your answers into each question and hit enter
+;ladsf
 
 ### Contributions:
-undefined + @tmair1012
+lksd;af Github: jl;dsaf
 
 ### License:
 MIT
+
+### Link to License Information"
+https://opensource.org/licenses/MIT
+
+### Email:
+jkl;adsf
